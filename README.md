@@ -1,9 +1,9 @@
->📋  A template README.md for code accompanying a Machine Learning paper
 # Final Project for CS598 DL4H in Spring 2022
 
-This repository is the official implementation of [Final Project for CS598 DL4H in Spring 2022]. 
+This repository is reproducing the Automated ICD-9-CM medical coding of diabetic patient’s clinical reports[[1]](#1).
 
 >📋  Optional: include a graphic explaining your approach/main result, bibtex entry, link to demos, blog posts and tutorials
+
 ## Requirements
 
 To install requirements:
@@ -49,6 +49,9 @@ Our model achieves the following performance on :
 | My awesome model   |     85%         |      95%       |
 
 >📋  Include a table of results from your paper, and link back to the leaderboard for clarity and context. If your main result is a figure, include that figure and link to the command or notebook to reproduce it. 
+## References
+<a id="1">[1]</a> 
+Pereira, V., Matos, S., & Oliveira, J. L. (2018, October). Automated ICD-9-CM medical coding of diabetic patient's clinical reports. In Proceedings of the First International Conference on Data Science, E-learning and Information Systems (pp. 1-6).
 
 ## Contributing
 
