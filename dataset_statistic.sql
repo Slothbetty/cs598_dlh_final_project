@@ -109,6 +109,22 @@ group by rirui.ICD9_CODE
 order by report_percentage desc
 limit 11;
 
+-- eleven most common regular icd codes.
+with diabete_patients as (select distinct note.HADM_ID, note.ROW_ID, note.SUBJECT_ID, note.CATEGORY, note.TEXT
+from `physionet-data.mimiciii_clinical.diagnoses_icd` icd
+join `physionet-data.mimiciii_notes.noteevents` note on note.SUBJECT_ID = icd.SUBJECT_ID and note.HADM_ID = icd.HADM_ID
+where ICD9_CODE like '250%' and note.HADM_ID is not null 
+and note.ISERROR is null and note.CHARTDATE is not null
+and note.SUBJECT_ID is not null and note.TEXT is not null
+and note.CATEGORY is not null and note.CGID is not null),
+report_id_reg_icd as (select distinct dp.ROW_ID, dicd.ICD9_CODE as ICD9_CODE from diabete_patients dp
+join `physionet-data.mimiciii_clinical.diagnoses_icd` dicd on dp.HADM_ID = dicd.HADM_ID
+order by dp.ROW_ID)
+select riri.ICD9_CODE, count(riri.ROW_ID)/240567 as report_percentage from report_id_reg_icd riri
+group by riri.ICD9_CODE
+order by report_percentage desc
+limit 11;
+
 -- Note events category ordering:
 with result as (select distinct note.HADM_ID, note.ROW_ID, note.SUBJECT_ID, note.CATEGORY, note.TEXT
 from `physionet-data.mimiciii_clinical.diagnoses_icd` icd
