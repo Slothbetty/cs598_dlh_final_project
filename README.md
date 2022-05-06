@@ -2,16 +2,6 @@
 
 This repository is a reproduction of the "Automated ICD-9-CM medical coding of diabetic patient’s clinical reports" paper which was published in 2018[[1]](#1). We used the public MIMIC III dataset[[2]](#2) and reproduced the three parellel convolutional layers' CNN model, CNN baseline models and Bag of Tricks models to obtain the simliar result as the paper did.
 
-●	Citation to the original paper(done)
-●	Link to the original paper’s repo (if applicable)(no repo)
-●	Dependencies
-●	Data download instruction
-●	Preprocessing code + command (if applicable)
-●	Training code + command (if applicable)
-●	Evaluation code + command (if applicable)
-●	Pretrained model (if applicable)
-●	Table of results (no need to include additional experiments, but main reproducibility result should be included)
-
 ## Dependencies
 
 Following are the dependencies we applied in our code, which could be easily installed by run all in the google colab:
