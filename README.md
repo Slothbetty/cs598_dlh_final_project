@@ -17,7 +17,7 @@ Following are the data download instruction for our project:
 2. Register account for MIMIC-III Clinical Database V1.4 and upload the corresponding certificate document.
 3. Access the Clinical Database through Google Bigquery and execute the query in dataset_generation.sql there. Export the query running result as a csv file and save it. This csv file is the raw data that we are going to use in our project.
 
-## Preprocessing code + command
+## Preprocessing code
 
 Following are the steps to preprocess the raw data:
 1. Save the raw data into your local drive or google drive. Use the preprocessing_data.ipynb first half part of code(till corpus_line.txt block) to generate corpus_line.txt file to get all possible token strings.
