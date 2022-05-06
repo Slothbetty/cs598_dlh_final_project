@@ -27,42 +27,29 @@ Following are the data download instruction for our project:
 2. Register account for MIMIC-III Clinical Database V1.4 and upload the corresponding certificate document.
 3. Access the Clinical Database through Google Bigquery and execute the query in dataset_generation.sql there. Export the query running result as a csv file and save it. This csv file is the raw data that we are going to use in our project.
 
-## Training
+## Preprocessing code + command
 
-To train the model(s) in the paper, run this command:
+Following are the steps to preprocess the raw data:
+1. Save the raw data into your local drive or google drive. Use the preprocessing_data.ipynb first half part of code(till corpus_line.txt block) to generate corpus_line.txt file to get all possible token strings.
+2. Run the generate_rare_common_words_dictionary.ipynb with the raw data and save a rare_common_words_mapping.json file. This json will be used as words' replacement
+3. Run the remaining code in the preprocessing_data.ipynb. It will save the data into a csv file, this is the data file that we will use in our model training and testing part.
 
-```train
-python train.py --input-data <path_to_data> --alpha 10 --beta 20
-```
+## Training code and Evaluation code
 
->📋  Describe how to train the models, with example commands on how to train the models in your paper, including the full training procedure and appropriate hyperparameters.
-## Evaluation
+To train and evaluate our models, just simply run all in the jupyter notebooks above:
+model_without_cat_rolled_up.ipynb
+model_without_cat_regular.ipynb
+models_cat.ipynb
 
-To evaluate my model on ImageNet, run:
+## Table of results 
 
-```eval
-python eval.py --model-file mymodel.pth --benchmark imagenet
-```
+Following are the performance results of our models:
 
->📋  Describe how to evaluate the trained models on benchmarks reported in the paper, give commands that produce the results (section below).
-## Pre-trained Models
-
-You can download pretrained models here:
-
-- [My awesome model](https://drive.google.com/mymodel.pth) trained on ImageNet using parameters x,y,z. 
-
->📋  Give a link to where/how the pretrained models can be downloaded and how they were trained (if applicable).  Alternatively you can have an additional column in your results table with a link to the models.
-## Results
-
-Our model achieves the following performance on :
-
-### [Image Classification on ImageNet](https://paperswithcode.com/sota/image-classification-on-imagenet)
 
 | Model name         | Top 1 Accuracy  | Top 5 Accuracy |
 | ------------------ |---------------- | -------------- |
 | My awesome model   |     85%         |      95%       |
 
->📋  Include a table of results from your paper, and link back to the leaderboard for clarity and context. If your main result is a figure, include that figure and link to the command or notebook to reproduce it. 
 
 ## References
 <a id="1">[1]</a> 
