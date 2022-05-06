@@ -22,11 +22,11 @@ Following are the dependencies we applied in our code, which could be easily ins
 
 ## Data download instruction
 
-Following are the dependencies we applied in our code, which could be easily installed by run all in the google colab:
-```Setup
-!pip install -U strsimpy
-!pip install simplejson
-```
+Following are the data download instruction for our project:
+1. Apply the access to MIMIC-III Clinical Database V1.4 through this link. https://eicu-crd.mit.edu/gettingstarted/access/
+2. Register account for MIMIC-III Clinical Database V1.4 and upload the corresponding certificate document.
+3. Access the Clinical Database through Google Bigquery and execute the query in dataset_generation.sql there. Export the query running result as a csv file and save it. This csv file is the raw data that we are going to use in our project.
+
 ## Training
 
 To train the model(s) in the paper, run this command:
