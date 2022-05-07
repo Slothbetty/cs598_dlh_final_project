@@ -27,8 +27,7 @@ Following are the steps to preprocess the raw data:
 ## Training code and Evaluation code
 
 To train and evaluate our models, just simply run all in the jupyter notebooks above:
-model_without_cat_rolled_up.ipynb<br/>
-model_without_cat_regular.ipynb<br/>
+model_without_cat.ipynb<br/>
 models_cat.ipynb<br/>
 
 ## Table of results 
