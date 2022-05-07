@@ -34,11 +34,13 @@ models_cat.ipynb<br/>
 
 Following are the performance results of our models:
 
+Multi-label Classification Result:
 
-| Model name         | Top 1 Accuracy  | Top 5 Accuracy |
-| ------------------ |---------------- | -------------- |
-| My awesome model   |     85%         |      95%       |
+![multi-label classification](/images/Multi-label classification subtask result.png)
 
+Multi-label vs Binary Classification Result:
+
+![multi-label vs binary classification](/images/Multi-label vs Binary classification result.png)
 
 ## References
 <a id="1">[1]</a> 
