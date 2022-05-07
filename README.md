@@ -36,11 +36,11 @@ Following are the performance results of our models:
 
 Multi-label Classification Result:
 
-![multi-label classification](/images/Multi-label classification subtask result.png)
+![multi-label classification](/images/Multi-label_classification_subtask_result.png)
 
 Multi-label vs Binary Classification Result:
 
-![multi-label vs binary classification](/images/Multi-label vs Binary classification result.png)
+![multi-label vs binary classification](/images/Multi-label_vs_Binary_classification_result.png)
 
 ## References
 <a id="1">[1]</a> 
